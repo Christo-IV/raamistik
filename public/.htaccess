@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c >
+    Options -Multiviews
+    RewriteEngine On
+    RewriteBase /raamistik/public
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    # The following line was yoinked from google.
+    # My original: RewriteRule ^(.+)$ index.php?/url=$1 [QSA, L]
+    # *"url=" and "QSA" were removed*
+    #
+    # If some weird error is occuring then it's fairly likely that it's because of this.
+    # Especially if the error is about fetching data from the url.
+    RewriteRule ^(.+)$ index.php?/$1 [L]
+</IfModule>
