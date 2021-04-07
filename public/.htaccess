@@ -6,5 +6,5 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     # Adding QSA to the brackets at the end seems to cause a error 500
     # If some other weird error is occuring some place else, then it's fairly likely that it's because of this.
-    RewriteRule ^(.+)$ index.php?url=$1 [L]
+    RewriteRule ^(.+)$ index.php?url=$1 [L,QSA]
 </IfModule>
