@@ -10,4 +10,6 @@ class Posts
     {
         echo "Posts class is loaded <br>";
     }
+
+
 }
