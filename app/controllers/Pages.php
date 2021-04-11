@@ -21,7 +21,9 @@ class Pages extends Controller
 
     public function about() {
         //echo 'about method is loaded <br>';
-        $data = array('content' => 'Lorem ipsum lorem');
+        $data = array(
+            'title' => 'Pages - a review',
+            'content' => 'May I interest you in some pages?');
         $this->view('pages/about', $data);
     }
 }
