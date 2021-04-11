@@ -2,7 +2,7 @@
 
 class Core
 {
-    protected $currentController = 'Pages';
+    protected $currentController = 'pages';
     protected $currentMethod = 'index';
     protected $params = [];
     // constructor
@@ -27,7 +27,7 @@ class Core
         call_user_func_array(array($this->currentController, $this->currentMethod), $this->params);
 
         // logging
-        print_r($this->params);
+        // print_r($this->params);
     }
     // get url data
     public function getUrl() {
