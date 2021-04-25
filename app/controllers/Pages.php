@@ -22,8 +22,8 @@ class Pages extends Controller
     public function about() {
         // model test
         // $this->pagesModel->addUser();
-        $user = $this->pagesModel->getOneUser();
-        print_r($user);
+        // $user = $this->pagesModel->getOneUser();
+        // print_r($user);
 
         //echo 'about method is loaded <br>';
         $data = array(
