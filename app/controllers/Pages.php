@@ -25,6 +25,9 @@ class Pages extends Controller
         // $user = $this->pagesModel->getOneUser();
         // print_r($user);
 
+        $usersCount = $this->pagesModel->usersCount();
+        echo 'Users in db - '.$usersCount.'<br>';
+
         //echo 'about method is loaded <br>';
         $data = array(
             'title' => 'Pages - a review',
