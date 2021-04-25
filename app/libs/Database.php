@@ -10,6 +10,7 @@ class Database
 
     private $dbh;
     private $error;
+    private $stmt;
 
     /**
      * Database constructor.
@@ -26,7 +27,31 @@ class Database
         }
         catch (PDOException $e) {
             $this->error = $e->getMessage();
-            echo $this->error.'<br>';
+            echo '<p class="error-msg"><span class="error">Error:</span> '.$this->error.'</p>';
         }
+    }
+
+    public function query($sql) {
+        $this->stmt = $this->dbh->prepare($sql);
+    }
+
+    public function bind($param, $value, $type=null) {
+        if(is_null($type)) {
+            switch (true) {
+                case is_int($value):
+                    $type = PFO::PARAM_INT;
+                    break;
+                case is_bool($value):
+                    $type = PDO::PARAM_BOOL;
+                    break;
+                case is_null($value)  :
+                    $type = PDO::PARAM_STR;
+            }
+        }
+        $this->stmt->bindParam($param, $value, $type);
+    }
+
+    public function execute() {
+        $this->stmt->execute();
     }
 }

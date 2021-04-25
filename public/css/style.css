@@ -33,10 +33,23 @@ nav {
     padding-bottom: 0.5rem;
 }
 
-p {
+.content {
     font-size: 1.1rem;
     font-style: italic;
-    /*color: #f1cc3f;*/
     color: lightgray;
     padding-top: 1rem;
+}
+
+.error {
+    color: crimson;
+    font-weight: bold;
+    border-width: 2px 0;
+    border-style: solid;
+    border-color: inherit;
+    padding: 1px 10px;
+    text-shadow: crimson 0 0 2px;
+}
+
+.error-msg {
+    margin: 0.4rem 0;
 }
