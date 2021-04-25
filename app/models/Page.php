@@ -12,7 +12,7 @@ class Page
     {
         $this->db = new Database();
     }
-
+    /*
     public function addUser() {
         $this->db->query('INSERT INTO users SET name=:name, email=:email, status=:status');
         $this->db->bind('name', 'user1');
@@ -35,5 +35,5 @@ class Page
     public function usersCount() {
         $this->getUsers();
         return $this->db->rowCount();
-    }
+    } */
 }

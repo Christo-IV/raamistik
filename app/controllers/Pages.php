@@ -19,6 +19,7 @@ class Pages extends Controller
         $this->view('pages/index', $data);
     }
 
+    /*
     public function about() {
         // model test
         // $this->pagesModel->addUser();
@@ -33,5 +34,5 @@ class Pages extends Controller
             'title' => 'Pages - a review',
             'content' => 'May I interest you in some pages?');
         $this->view('pages/about', $data);
-    }
+    }*/
 }
