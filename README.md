@@ -41,10 +41,10 @@ The project is divided into two main folders: `app/` and `public/`.
 
 ### Important files
 
-- `public/index.php` - The source file where all the code is initiated. When writing relative paths in code, then
-  take into account that the path starts from this file.
+- `public/index.php` - The source file where all the code is initiated. When writing relative paths,
+  take into account that the **paths start from this file**.
 - `app/bootstrap.php` - File for dependencies.
-- `app/config/constants.php` - Variables that never change throughout the code. Values need to be manually set.
+- `app/config/constants.php` - Variables that never change throughout the code. **Values need to be set manually**.
 - `app/libs/Core.php` - Responsible for retrieving and cleaning up the URL.
 
 ## Authors
