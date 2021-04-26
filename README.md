@@ -31,9 +31,22 @@ define('DB_USER', 'user');
 define('DB_PASS', 'pass');
 define('DB_NAME', 'dbname');
 ```
-Start the Apache and MySQL services with the XAMPP control panel
+Start the Apache and MySQL services with the XAMPP control panel.
 
-Going to `DB_HOST`/`PROJECT_NAME`/pages in your browser should now show a simple black and gray webpage with one heading and paragraph.
+Going to `DB_HOST`/`PROJECT_NAME`/pages in your browser should now show a simple gray and black webpage with one 
+heading and paragraph.
+
+## File Structure
+
+The project is divided into two main folders: `app/` and `public/`.
+
+### Important files
+
+- `public/index.php` - The source file where all the code is initiated. When writing relative paths in code, then
+  take into account that the path starts from this file.
+- `app/bootstrap.php` - File for dependencies.
+- `app/config/constants.php` - Variables that never change throughout the code. Values need to be manually set.
+- `app/libs/Core.php` - Responsible for retrieving and cleaning up the URL.
 
 ## Authors
 
@@ -50,7 +63,7 @@ who participated in this project.
 
 ## License
 
-This project doesn't have any licenses.
+This project doesn't have any licenses associated with it.
 
 ## Acknowledgments
 
